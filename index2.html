@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .selected {
+            background-color: darkgreen; /* Tailwind blue-500 */
+            color: white;
+        }
+
+        .idkbtn{
+            background-color: rgba(128, 128, 128, 0.555);
+        }
+    </style>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uditnarayan</title>
+</head>
+
+<body>
+    <nav b-u16xsdcw1j="" style="    max-height: 80px;" class="bg-white border-gray-200 dark:bg-gray-900">
+        <div b-u16xsdcw1j="" class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
+            <div b-u16xsdcw1j="" class="customrow">
+
+                <a class="flex items-center space-x-3 rtl:space-x-reverse" href="/">
+                    <img src="/images/Assets/3max.png" class="h-12" alt="Logo">
+                    <span b-u16xsdcw1j=""
+                        class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">ADMITGENIUS</span>
+
+                </a>
+                <button b-u16xsdcw1j="" data-collapse-toggle="mega-menu-icons" type="button"
+                    class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                    aria-controls="mega-menu-icons" aria-expanded="false">
+                    <span b-u16xsdcw1j="" class="sr-only">Open main menu</span>
+                    <svg b-u16xsdcw1j="" class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 17 14">
+                        <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="M1 1h15M1 7h15M1 13h15"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+
+
+            <div b-u16xsdcw1j="" class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
+
+                <button b-u16xsdcw1j="" id="dropdownAvatarNameButton" data-dropdown-toggle="dropdownAvatarName"
+                    class="flex items-center text-sm pe-1 font-medium text-gray-900 rounded-full hover:text-blue-600 dark:hover:text-blue-500 md:me-0 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:text-white"
+                    type="button">
+                    <span b-u16xsdcw1j="" class="sr-only">Open user menu</span>
+                    <img b-u16xsdcw1j="" style="object-fit:cover; margin-right: 5px" class="w-8 h-8 me-2 rounded-full"
+                        src="https://agbkt.s3.amazonaws.com/dummyprofile.jpg" alt="user photo">
+                    <span b-u16xsdcw1j="" id="username-placeholder">Nikev</span>
+                    <svg b-u16xsdcw1j="" class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
+                        fill="none" viewBox="0 0 10 6">
+                        <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="2" d="m1 1 4 4 4-4"></path>
+                    </svg>
+                </button>
+                <!-- Dropdown menu -->
+                <div b-u16xsdcw1j=""
+                    style="width: fit-content; z-index: 20; position: absolute; inset: 0px auto auto 0px; margin: 0px; transform: translate(327px, 77px);"
+                    id="dropdownAvatarName"
+                    class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700 dark:divide-gray-600"
+                    data-popper-placement="bottom">
+                    <div b-u16xsdcw1j="" class="px-4 py-3 text-sm text-gray-900 dark:text-white">
+                        <div b-u16xsdcw1j="" class="font-medium ">Nikev</div>
+                        <div b-u16xsdcw1j="" id="email-placeholder" class="truncate">meharpatel2512@gmail.com</div>
+                    </div>
+                    <ul b-u16xsdcw1j="" class="py-2 text-sm text-gray-700 dark:text-gray-200"
+                        aria-labelledby="dropdownInformdropdownAvatarNameButtonationButton">
+                        <li b-u16xsdcw1j="">
+                            <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                href="/StudentProfile">Dashboard</a>
+                        </li>
+                        <li b-u16xsdcw1j="">
+                            <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                href="/StudentProfile/UpdateProfile">Update Profile</a>
+                        </li>
+                        <li b-u16xsdcw1j="">
+                            <a class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                                href="/StudentProfile/Status">Status</a>
+                        </li>
+                    </ul>
+                    <div b-u16xsdcw1j="" class="py-2">
+                        <form style="padding: 0;" method="post" action="/Users/Logout">
+                            <button b-u16xsdcw1j="" style="width: 100%;text-align: start;" type="submit"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">
+                                Sign out
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+                <div b-u16xsdcw1j="" id="select-modal" tabindex="-1" aria-hidden="true"
+                    class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div b-u16xsdcw1j="" class="relative p-4 w-full max-w-md max-h-full">
+                        <!-- Modal content -->
+                        <div b-u16xsdcw1j="" class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div b-u16xsdcw1j=""
+                                class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 b-u16xsdcw1j="" class="text-lg font-semibold text-gray-900 dark:text-white">
+                                    How do you want to Register as?
+                                </h3>
+                                <button b-u16xsdcw1j="" type="button"
+                                    class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm h-8 w-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white"
+                                    data-modal-toggle="select-modal">
+                                    <svg b-u16xsdcw1j="" class="w-3 h-3" aria-hidden="true"
+                                        xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2"
+                                            d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"></path>
+                                    </svg>
+                                    <span b-u16xsdcw1j="" class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+
+                            <div b-u16xsdcw1j="" class="p-4 md:p-5">
+
+                                <ul b-u16xsdcw1j="" class="space-y-4 mb-4">
+                                    <li b-u16xsdcw1j="">
+                                        <a href="/users/Register">
+                                            <label b-u16xsdcw1j="" for="job-1"
+                                                class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                                <div b-u16xsdcw1j="" class="block">
+                                                    <div b-u16xsdcw1j="" class="w-full text-lg font-semibold">Student
+                                                    </div>
+                                                    <div b-u16xsdcw1j="" style="max-width: 300px;"
+                                                        class="w-full text-gray-500 dark:text-gray-400">Get Intern or
+                                                        find University for Education</div>
+                                                </div>
+                                                <svg b-u16xsdcw1j=""
+                                                    class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 14 10">
+                                                    <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                                                </svg>
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li b-u16xsdcw1j="">
+                                        <a href="/users/UniversityRegisterRequest">
+                                            <label b-u16xsdcw1j="" for="job-2"
+                                                class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                                <div b-u16xsdcw1j="" class="block">
+                                                    <div b-u16xsdcw1j="" class="w-full text-lg font-semibold">University
+                                                    </div>
+                                                    <div b-u16xsdcw1j="" style="max-width: 300px;"
+                                                        class="w-full text-gray-500 dark:text-gray-400">Register as
+                                                        unviersity and get students directly</div>
+                                                </div>
+                                                <svg b-u16xsdcw1j=""
+                                                    class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 14 10">
+                                                    <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                                                </svg>
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li b-u16xsdcw1j="">
+                                        <a href="/users/counselorregisterrequest">
+                                            <label b-u16xsdcw1j="" for="job-3"
+                                                class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                                <div b-u16xsdcw1j="" class="block">
+                                                    <div b-u16xsdcw1j="" class="w-full text-lg font-semibold">Counselor
+                                                    </div>
+                                                    <div b-u16xsdcw1j="" style="max-width: 300px;"
+                                                        class="w-full text-gray-500 dark:text-gray-400">Register to our
+                                                        portal with you pricing and get help the student to get placed
+                                                    </div>
+                                                </div>
+                                                <svg b-u16xsdcw1j=""
+                                                    class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 14 10">
+                                                    <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                                                </svg>
+                                            </label>
+                                        </a>
+                                    </li>
+                                    <li b-u16xsdcw1j="">
+                                        <a href="/users/CompanyRegisterRequest">
+                                            <label b-u16xsdcw1j="" for="job-3"
+                                                class="inline-flex items-center justify-between w-full p-5 text-gray-900 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-500 dark:peer-checked:text-blue-500 peer-checked:border-blue-600 peer-checked:text-blue-600 hover:text-gray-900 hover:bg-gray-100 dark:text-white dark:bg-gray-600 dark:hover:bg-gray-500">
+                                                <div b-u16xsdcw1j="" class="block">
+                                                    <div b-u16xsdcw1j="" class="w-full text-lg font-semibold">Company
+                                                    </div>
+                                                    <div b-u16xsdcw1j="" style="max-width: 300px;"
+                                                        class="w-full text-gray-500 dark:text-gray-400">Post for
+                                                        Job/Intern application and get employee directly from our portal
+                                                    </div>
+                                                </div>
+                                                <svg b-u16xsdcw1j=""
+                                                    class="w-4 h-4 ms-3 rtl:rotate-180 text-gray-500 dark:text-gray-400"
+                                                    aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                    viewBox="0 0 14 10">
+                                                    <path b-u16xsdcw1j="" stroke="currentColor" stroke-linecap="round"
+                                                        stroke-linejoin="round" stroke-width="2"
+                                                        d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+                                                </svg>
+                                            </label>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <button b-u16xsdcw1j=""
+                                    class="text-white inline-flex w-full justify-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                                    Next step
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <script>
+                    function redirectToLoginPage() {
+                        window.location.href = '/Users/Login';
+                    }
+                    function redirectToSignUpPage() {
+                        window.location.href = '/Users/Register';
+                    }
+                </script>
+            </div>
+            <style>
+                .nav-item {
+                    color: #01111c;
+                    transition: transform 0.2s ease, color 0.2s ease;
+                }
+
+                .nav-item:hover {
+                    transform: scale(1.05);
+                    font-weight: bold;
+                    color: #181fff;
+                }
+            </style>
+
+            <div b-u16xsdcw1j="" id="mega-menu-icons"
+                class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1">
+                <ul b-u16xsdcw1j=""
+                    class="flex flex-col mt-4 font-medium md:flex-row md:mt-0 md:space-x-8 rtl:space-x-reverse">
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/">Home</a>
+                    </li>
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/StudentHome/StudentHomePage">
+                            Universities
+                        </a>
+                    </li>
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/Scholarship/AllScholarship">
+                            Scholarships
+                        </a>
+                    </li>
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/Counsilor/AllCounsilor">
+                            Counselors
+                        </a>
+                    </li>
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/Company/AllCompanies">
+                            Internships
+                        </a>
+                    </li>
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/Community/AllCommunities">
+                            Communities
+                        </a>
+                    </li>
+
+                    <li b-u16xsdcw1j="" class="nav-item">
+                        <a class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:p-0 dark:text-blue-500 md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-blue-500 md:dark:hover:bg-transparent dark:border-gray-700"
+                            aria-current="page" href="/Home/AboutUs">
+                            About Us
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+    <div b-u16xsdcw1j="" class="Max-container">
+        <main b-u16xsdcw1j="" role="main" class="pb-3">
+
+            <style>
+                .form-group {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                }
+
+                label {
+                    padding-left: 10px;
+                }
+
+                .formbg {
+                    background-image: linear-gradient(174.2deg, rgb(228 228 255 / 51%) 7.1%, rgba(240, 246, 238, 1) 67.4%);
+                    width: 100%;
+                    padding: 3% 12%;
+                    margin-right: 1%;
+                    border-radius: 20px
+                }
+
+                form {
+                    padding: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .form-control {
+                    width: 30vw;
+                    margin-bottom: 2rem;
+                    border: 1px solid #4d20f7;
+                    border-radius: 30px;
+                    padding: 10px 10px 10px 15px;
+                    width: 100%;
+                }
+
+                input::placeholder,
+                textarea::placeholder {
+                    color: black;
+                    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                    font-size: 1rem;
+                }
+
+                .submitbtn {
+                    margin: 0.5rem;
+                    padding: 1rem;
+                    background-color: #003254;
+                    border-radius: 5rem;
+                    width: 100%;
+                    color: #fff;
+                    border: none;
+                    cursor: pointer;
+                    align-self: center;
+                    font-weight: bold;
+                    margin-top: 15px;
+                }
+
+                .submitbtn:hover {
+                    background-color: #2E2E2E;
+                    cursor: pointer;
+                }
+            </style>
+
+            <div style="display:flex;">
+                <div style="height: 100vh;" class="flex flex-col top-30 left-0 w-64 bg-white h-full ">
+
+                    <div class="overflow-y-auto overflow-x-hidden flex-grow">
+                        <ul class="flex flex-col py-4 space-y-1">
+                            <li class="px-5">
+                                <div class="flex flex-row items-center h-8">
+                                    <div class="text-sm font-light tracking-wide text-gray-500">Menu</div>
+                                </div>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-house"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Dashboard</span>
+                                </a>
+                            </li>
+                            <li class="px-5">
+                                <div class="flex flex-row items-center h-8">
+                                    <div class="text-sm font-light tracking-wide text-gray-500">Exams</div>
+                                </div>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/Eligibility/AptitudeTest">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-award"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Aptitude Test</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/Eligibility/EligibilityTest">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-user-graduate"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Eligibility Test</span>
+                                </a>
+                            </li>
+
+                            <li class="px-5">
+                                <div class="flex flex-row items-center h-8">
+                                    <div class="text-sm font-light tracking-wide text-gray-500">Resume Builder</div>
+                                </div>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile/EducationDetails">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Add Education Details</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile/ExperienceDetails">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Add Experiance Details</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile/AddProject">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-pencil"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Add Project Details</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a style="padding-left: 10px;"
+                                    class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile/resume">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <i class="fa-solid fa-eye"></i>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">View Resume</span>
+                                </a>
+                            </li>
+
+
+                            <li class="px-5">
+                                <div class="flex flex-row items-center h-8">
+                                    <div class="text-sm font-light tracking-wide text-gray-500">Settings</div>
+                                </div>
+                            </li>
+
+                            <li>
+                                <a class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6"
+                                    href="/StudentProfile/UpdateProfile">
+                                    <span class="inline-flex justify-center items-center ml-4">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z">
+                                            </path>
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                        </svg>
+                                    </span>
+                                    <span class="ml-2 text-sm tracking-wide truncate">Edit User Details</span>
+                                </a>
+                            </li>
+                            <li>
+                                <form style="padding:inherit;margin:0;" method="post" action="/Users/Logout">
+                                    <button style="width:100%" type="submit"
+                                        class="relative flex flex-row items-center h-11 focus:outline-none hover:bg-gray-50 text-gray-600 hover:text-gray-800 border-l-4 border-transparent hover:border-indigo-500 pr-6">
+                                        <span style="margin-left: 18px;"
+                                            class="inline-flex justify-center items-center ml-4">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1">
+                                                </path>
+                                            </svg>
+                                        </span>
+                                        <span class="ml-2 text-sm tracking-wide truncate">Logout</span>
+                                    </button>
+                                </form>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <div style="background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(176,229,208,1) 42%, rgba(92,202,238,0.41) 93.6% );" class="w-full m-10  p-10 rounded-lg">
+                    <p class="text-4xl font-semibold text-center mt-8 mb-10">Psychometric Test</p>
+                    
+                    <div class="p-8 rounded shadow-md w-full" style="background-color: rgba(255, 255, 255, 0.5);">
+                        <p class="text-lg mb-6">1. What is the capital of France?</p>
+                        <div class="flex flex-col space-y-4">
+                            <button class="idkbtn option p-3 rounded" onclick="selectOption(this)">A. Berlin</button>
+                            <button class="idkbtn option p-3 rounded" onclick="selectOption(this)">B. Madrid</button>
+                            <button class="idkbtn option p-3 rounded" onclick="selectOption(this)">C. Paris</button>
+                            <button class="idkbtn option p-3 rounded" onclick="selectOption(this)">D. Rome</button>
+                        </div>
+                    </div>
+                    <script>
+                        function selectOption(selectedButton) {
+                            document.querySelectorAll('.option').forEach(button => {
+                                button.classList.remove('selected');
+                                button.classList.add('idkbtn');
+                            });
+                            selectedButton.classList.add('selected');
+                            selectedButton.classList.remove('idkbtn');
+                        }
+                    </script>
+                </div>
+            </div>
+            
+        </main>
+    </div>
+
+</body>
+
+</html>
